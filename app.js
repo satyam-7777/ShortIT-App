@@ -28,16 +28,16 @@ app.use((req, res, next) => {
 app.use("/api/v1/auth", authRouter);
 app.use("/url", shortUrlRouter);
 
-// Handle undefined API routes
-app.use((req, res, next) => {
-  next(new AppError("Requested URL is not available on the server", 404));
-});
-
 // Serve React frontend in production
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+// Handle undefined API routes
+app.use((req, res, next) => {
+  next(new AppError("Requested URL is not available on the server", 404));
 });
 
 // Global error handler
