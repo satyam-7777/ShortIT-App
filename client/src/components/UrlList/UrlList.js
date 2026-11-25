@@ -23,7 +23,7 @@ export default function UrlList({ urls, loading, error }) {
           <p>No URLs created yet.</p>
         ) : (
           urls.map((url) => {
-            const shortUrl = `${window.location.origin}/api/v1/urls/${url.short_url}`;
+            const shortUrl = `${window.location.origin}/url/${url.short_url}`;
 
             return (
               <div className="url-item" key={url._id}>

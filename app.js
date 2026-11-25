@@ -26,21 +26,19 @@ app.use((req, res, next) => {
 
 // API routes
 app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/urls", shortUrlRouter);
+app.use("/url", shortUrlRouter);
 
 // Handle undefined API routes
-app.all("/api/v1/{*splat}", (req, res, next) => {
+app.use((req, res, next) => {
   next(new AppError("Requested URL is not available on the server", 404));
 });
 
 // Serve React frontend in production
-// if (process.env.NODE_ENV === "production") {
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
-// }
 
 // Global error handler
 app.use(globalErrorHandler);

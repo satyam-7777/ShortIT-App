@@ -15,7 +15,7 @@ export default function Dashboard() {
     try {
       setUrlsError("");
 
-      const response = await fetch("/api/v1/urls/my-urls", {
+      const response = await fetch("/url/my-urls", {
         credentials: "include",
       });
 

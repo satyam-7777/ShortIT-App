@@ -22,7 +22,7 @@ export default function UrlShortenerCard({ onUrlShortened }) {
       setError("");
       setShortenedUrl(null);
 
-      const response = await fetch("/api/v1/urls", {
+      const response = await fetch("/url", {
         method: "POST",
         credentials: "include",
         headers: {
