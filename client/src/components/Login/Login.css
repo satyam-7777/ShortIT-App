@@ -1,0 +1,19 @@
+/* style  */
+.form-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0;
+  gap: 5px;
+}
+
+.login-title {
+  font-weight: 400;
+  font-size: 24px;
+  color: #5b21b6;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #ec4899;
+}

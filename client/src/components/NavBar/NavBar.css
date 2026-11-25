@@ -1,0 +1,130 @@
+/* Mobile style*/
+.navbar {
+  width: 100%;
+  background-color: #0f0b24;
+  padding: 12px;
+  gap: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.logo-title {
+  color: #ec4899;
+  font-weight: 800;
+}
+
+.login-link {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.signup-link,
+.dashboard-link {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #ffffff;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.logout-link {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 7px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.logout-link:hover {
+  background-color: #b91c1c;
+  color: #ffffff;
+  border-color: #b91c1c;
+}
+
+/* Tablet style*/
+@media (min-width: 768px) {
+  .navbar {
+    padding: 16px 40px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-links ul {
+    gap: 20px;
+  }
+
+  .login-link {
+    font-size: 14px;
+  }
+
+  .signup-link,
+  .dashboard-link {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  .logout-link {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Desktop style*/
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 20px 80px;
+  }
+
+  .nav-links ul {
+    gap: 24px;
+  }
+}

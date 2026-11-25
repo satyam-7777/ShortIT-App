@@ -1,0 +1,122 @@
+/* mobile style */
+.url-shortener-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 0;
+  padding: 25px;
+  background-color: #ffffff;
+  color: #1e1b2e;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.url-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.url-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3e8ff;
+  color: #7c3aed;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.url-card-header h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+.url-card-header p,
+.url-card-footer {
+  color: #777;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.url-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+
+.url-input-container input,
+.url-input-container button {
+  width: 100%;
+  min-width: 0;
+  padding: 15px;
+  border-radius: 9px;
+}
+
+.url-input-container input {
+  border: 1px solid #ddd;
+  outline: none;
+  color: #333;
+  font: inherit;
+}
+
+.url-input-container input:focus {
+  border-color: #7c3aed;
+}
+
+.url-input-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.url-input-container button:hover {
+  background: linear-gradient(135deg, #6d28d9, #db2777);
+}
+
+.url-card-footer {
+  text-align: center;
+}
+
+.shortened-url-result a {
+  color: #7c3aed;
+}
+
+.shortened-url-result button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #db2777;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Tablet style*/
+@media (min-width: 768px) {
+  .url-shortener-card {
+    padding: 30px;
+  }
+}
+
+/* Desktop style*/
+@media (min-width: 1024px) {
+  .url-shortener-card {
+    max-width: 100%;
+    padding: 35px;
+  }
+}

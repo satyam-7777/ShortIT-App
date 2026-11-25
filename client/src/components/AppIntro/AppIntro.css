@@ -1,0 +1,100 @@
+/* Mobile style  */
+.app-intro-container {
+  padding: 20px;
+}
+
+.app-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.app-intro h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.intro-text {
+  color: #ec4899;
+}
+
+.app-intro p {
+  max-width: 500px;
+  color: #ddd9e7;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  min-width: 0;
+}
+
+.get-started-btn {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  padding: 10px 24px;
+}
+
+.sign-in-btn {
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px solid #a78bfa;
+  padding: 10px 16px;
+}
+
+/* Tablet style*/
+@media (min-width: 768px) {
+  .app-intro h1 {
+    font-size: 48px;
+  }
+
+  .app-intro p {
+    font-size: 17px;
+  }
+}
+
+/* Desktop style*/
+@media (min-width: 1024px) {
+  .app-intro-container {
+    align-items: flex-start;
+  }
+
+  .app-intro {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .app-intro h1 {
+    font-size: 60px;
+  }
+
+  .link-container {
+    justify-content: flex-start;
+  }
+}
