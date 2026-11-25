@@ -40,6 +40,7 @@ export default function UrlShortenerCard({ onUrlShortened }) {
 
       setShortenedUrl(data);
       setUrl("");
+      setLoading(false);
 
       if (onUrlShortened) {
         await onUrlShortened();
