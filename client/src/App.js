@@ -5,11 +5,20 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import AuthRoute from "./components/Auth/AuthRoute";
 import NotFound from "./pages/NotFoundPage/NotFound";
+import Layout from "./components/Layout/Layout";
+
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <LandingPage />
+            </Layout>
+          }
+        />
 
         <Route element={<AuthRoute type="public" />}>
           <Route path="/login" element={<LoginPage />} />
@@ -17,7 +26,14 @@ function App() {
         </Route>
 
         <Route element={<AuthRoute type="protected" />}>
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <Layout>
+                <DashboardPage />
+              </Layout>
+            }
+          />
         </Route>
 
         <Route path="*" element={<NotFound />} />

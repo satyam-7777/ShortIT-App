@@ -1,6 +1,7 @@
 /* Mobile style */
 .dashboard {
-  min-height: 100vh;
+  flex: 1;
+  min-height: 0;
   width: 100%;
   background-color: #0f0b24;
   color: #ffffff;

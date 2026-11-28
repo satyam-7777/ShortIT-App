@@ -5,6 +5,8 @@ const globalErrorHandler = (err, req, res, next) => {
   let status = err.status || "error";
   let message = err.message || "Something went wrong";
 
+  console.log("it ran");
+
   if (err.name === "ValidationError") {
     statusCode = 400;
     status = "failed";

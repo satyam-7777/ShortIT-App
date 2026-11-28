@@ -77,6 +77,68 @@
   color: #7c3aed;
 }
 
+.delete-btn:hover {
+  color: red;
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.edit-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.edit-input-row input {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #374151;
+  font-size: 14px;
+  outline: none;
+}
+
+.edit-input-row input:focus {
+  border-color: #8b5cf6;
+  background: #fff;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.edit-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  background: #fff;
+  color: #4b5563;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.edit-actions button:last-child {
+  background: #5b45e6;
+  color: #fff;
+  border-color: #5b45e6;
+}
+
 /* Tablet style*/
 @media (min-width: 768px) {
   .url-list-container {

@@ -11,6 +11,7 @@ const shortUrlSchema = new mongoose.Schema(
       type: String,
       required: [true, "Short URL is required"],
       trim: true,
+      unique: true,
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,

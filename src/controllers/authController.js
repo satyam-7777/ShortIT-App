@@ -2,14 +2,10 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const AppError = require("../utils/appError");
+const config = require("../config/index.js");
 
 const storeTokenToCookie = (res, token) => {
-  res.cookie("token", token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-  });
+  res.cookie("token", token, config.cookieOptions);
 };
 
 exports.signup = async (req, res, next) => {
